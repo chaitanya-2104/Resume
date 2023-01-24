@@ -1,0 +1,16 @@
+asgiref==3.4.1
+backports.entry-points-selectable==1.1.0
+camelcase==0.2
+distlib==0.3.2
+Django==3.2.7
+django-unused-media==0.2.2
+djangorestframework==3.12.4
+filelock==3.0.12
+numpy==1.21.1
+Pillow==8.4.0
+platformdirs==2.3.0
+pytz==2021.1
+six==1.16.0
+sqlparse==0.4.2
+virtualenv==20.7.2
+virtualenvwrapper-win==1.2.6

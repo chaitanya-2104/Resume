@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <style>
+      body{
+            top: 4cm;
+        }
+        h4{
+          margin-left: 37%;
+        }
+        div:hover{
+         
+          background-color:rgba(0, 255, 255,07);
+          color:red;
+        }
+  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <title>Showdata</title>
+</head>
+<body style="background-color: cyan;cursor:not-allowed;">
+  <h1></h1>
+  <!--<marquee  direction="right" style="font-size: 100%;color: rgb(228, 214, 217);">@chaitanyachobhe</marquee>-->
+      <div style="background-color: coral;text-shadow: 2px 2px 5px red, 5px 5px 8px blue ;border-radius: 50%;">
+        <h1 class="text-center mb-3 " >Candidate detail</h1>
+      </div>
+            <div class="row">
+         <div style="font-size:100%;">
+         
+            
+            <h4>Name: {{candidates.Name}}</h4>
+            <h4>Address: {{candidates.Address}}</h4>
+           
+         
+           <!--   <h1 style="margin-right: 30%;position: fixed;color: pink;">@chaitanyachobhe</h1>
+            <h1 style="margin-left: 68%;position: fixed;color: pink;">@chaitanyachobhe</h1> -->
+            <h4>Mobile No: {{candidates.Mobile_no}}</h4>
+            <h4>Email: {{candidates.Email}}</h4>
+            <h4>Age:{{candidates.Age}}</h4>
+            <h4>Education:{{candidates.Education}}</h4>
+         </div>
+     </div>
+     <div style="background-color: rgb(255, 68, 0);text-shadow: 2px 2px 5px red, 5px 5px 8px blue;border-radius: 50%;">
+     <h1 class="alter-danger text-center" >Educational Qualification</h1>
+    </div>
+     <table border="2" width="80%" height="60%" class="table table-bordered border-primary" style="border: solid rgb(19, 197, 43) 4px;border-collapse:collapse ; background-color: chocolate;">
+         <thead>
+           <tr style="background-color: cornsilk;">
+             <th scope="col" colspan="2">Sr.No</th>
+             <th scope="col">Qualification</th>
+             <th scope="col">University</th>
+             <th scope="col">Institution</th>
+             <th scope="col">Year of Passing</th>
+             <th scope="col">Percentage</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr>
+              <td colspan="2">1</td>
+              <td>{{candidate1.Qualification}}</td>
+              <td>{{candidate1.University}}</td>
+              <td>{{candidate1.Institution}}</td>
+              <td>{{candidate1.Year_of_passing}}</td>
+              <td>{{candidate1.Percentag}}</td>
+            </tr>
+         
+            <tr style="background-color: darkorange;">
+
+                <td colspan="2">2</td>
+                <td>{{candidate2.Qualification1}}</td>
+                <td>{{candidate2.University1}}</td>
+                <td>{{candidate2.Institution1}}</td>
+                <td>{{candidate2.Year_of_passing1}}</td>
+                <td>{{candidate2.Percentag1}}</td>
+              </tr>
+             
+              <tr>
+                <td colspan="2">3</td>
+                <td>{{candidate3.Qualification2}}</td>
+                <td>{{candidate3.University2}}</td>
+                <td>{{candidate3.Institution2}}</td>
+                <td>{{candidate3.Year_of_passing2}}</td>
+                <td>{{candidate3.Percentag2}}</td>
+              </tr>
+              <tr style="background-color: darkorange;">
+                <td colspan="2" >4</td>
+                <td>{{candidate4.Qualification3}}</td>
+                <td>{{candidate4.University3}}</td>
+                <td>{{candidate4.Institution3}}</td>
+                <td>{{candidate4.Year_of_passing3}}</td>
+                <td>{{candidate4.Percentag3}}</td>
+              </tr>
+            
+           
+          </tbody>
+        </table>
+           
+            
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+        table{
+            width: 100%;
+        }
+        a:hover{
+            color: cyan;
+
+        }
+        body{
+            top: 4cm;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body style="background-color: darkorange; width: 100%;">
+
+    <div class="container">
+        <h1 style="height: 50px;"></h1>
+        
+        <div style="border-radius: 50%;background-color: rgb(223, 91, 91); text-shadow: 2px 2px 5px red;">
+        <h1 class="alter-danger text-center" style="">Student information Form</h1>
+    </div>
+        <div class="row">
+            <div>
+                <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for fm in form %}
+                <div style="height: 40px;margin-left: 35%;" >
+                   {{fm.label_tag}} {{fm}}
+                  
+                </div>
+
+                {% endfor %}  
+                <br>
+                <div style="background-color: rgb(196, 35, 110);text-shadow: 2px 2px 5px red;border-radius: 50%; ">
+                <h1 class="alter-danger text-center">Educational Qualification</h1>
+            </div>
+            <br>
+            <div class="table-responsive">
+                <table class="table-warning table-xs" border= "2" class="table table-bordered border-primary" style="border: solid red 5px;height: 180px;background-color: blanchedalmond;">
+                    <thead>
+                      <tr style="background-color: chartreuse;">
+                        <th scope="col" >Sr.No</th>
+                        <th scope="col" >Qualification</th>
+                        <th scope="col" >University</th>
+                        <th scope="col" > Institution</th>
+                        <th scope="col" >Year of passing</th>
+                        <th scope="col" >Percentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: aquamarine;">
+                            <th>1</th>
+                            {% for s in form1 %}
+                            <th>{{s}}</th>
+                            {% endfor %}
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            {% for p in form2 %}
+                            <th>{{p}}</th>
+                         {% endfor %}
+                        </tr>
+                        <tr style="background-color: aquamarine;">
+                          <th>3</th>
+                          {% for s in form3 %}
+                          <th>{{s}}</th>
+                          {% endfor %}
+                      </tr>
+                      <tr >
+                          <th>4</th>
+                          {% for s in form4 %}
+                          <th >{{s}}</th>
+                          {% endfor %}
+                      </tr>
+                      
+                  
+
+                    </tbody>
+                  </table>
+                </div>
+                  <br>
+
+                <a><input type ='submit' style="background-color: rgb(81, 255, 0);color: red;margin-left: 50%;" class='text-center btn btn-success ' value="Submit"></a><br><br>
+
+                <button type="button" class="btn btn-warning" style="margin-left: 49%;"><a href="/myapp/home">show data</a></button>
+                
+                
+               
+                </form>
+           
+             
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="{% static 'myapp/js/jquery.js' %}"></script>
+    <script src="{% static 'myapp/js/popper.js' %}"></script>
+    <script src="{% static 'myapp/js/bootstrap.js' %}"></script>
+    
+</body>
+</html>
